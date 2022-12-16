@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Doku.hpp" />
     <ClInclude Include="Dugum.hpp" />
     <ClInclude Include="DugumAgac.hpp" />
     <ClInclude Include="Hucre.hpp" />
@@ -136,8 +137,10 @@
     <ClInclude Include="İkiliAramaAgaci.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Doku.cpp" />
     <ClCompile Include="Dugum.cpp" />
     <ClCompile Include="DugumAgac.cpp" />
+    <ClCompile Include="Hucre.cpp" />
     <ClCompile Include="Kuyruk.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Radix.cpp" />

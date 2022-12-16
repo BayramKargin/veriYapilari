@@ -36,6 +36,9 @@
     <ClInclude Include="DugumAgac.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Doku.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadFile.cpp">
@@ -57,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="İkiliAramaAgaci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hucre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Doku.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

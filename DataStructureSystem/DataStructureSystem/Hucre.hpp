@@ -4,19 +4,12 @@
 class Hucre
 {
 public:
-	Hucre();
-	~Hucre();
-
+	Hucre(int veri);
+	int veri;
+	Hucre* sonraki;
+	Hucre* onceki;
 private:
 
 };
-
-Hucre::Hucre()
-{
-}
-
-Hucre::~Hucre()
-{
-}
 
 #endif // !Hucre_hpp
