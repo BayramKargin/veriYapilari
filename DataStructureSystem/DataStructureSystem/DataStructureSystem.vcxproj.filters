@@ -27,6 +27,15 @@
     <ClInclude Include="Radix.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Hucre.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="İkiliAramaAgaci.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DugumAgac.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadFile.cpp">
@@ -42,6 +51,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Radix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DugumAgac.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="İkiliAramaAgaci.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -128,16 +128,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dugum.hpp" />
+    <ClInclude Include="DugumAgac.hpp" />
+    <ClInclude Include="Hucre.hpp" />
     <ClInclude Include="Kuyruk.hpp" />
     <ClInclude Include="Radix.hpp" />
     <ClInclude Include="ReadFile.hpp" />
+    <ClInclude Include="İkiliAramaAgaci.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dugum.cpp" />
+    <ClCompile Include="DugumAgac.cpp" />
     <ClCompile Include="Kuyruk.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Radix.cpp" />
     <ClCompile Include="ReadFile.cpp" />
+    <ClCompile Include="İkiliAramaAgaci.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

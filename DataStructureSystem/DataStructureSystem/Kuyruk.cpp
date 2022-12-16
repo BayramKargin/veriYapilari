@@ -44,8 +44,19 @@ void Kuyruk::cikar()
         ilk = gec;
         if (ilk == 0)
         {
-            son == 0;
+            son = 0;
         }
         elemanSayisi--;
     }
+}
+int Kuyruk::getir()
+{
+    if (ilk != 0)
+        return ilk->veri;
+   // throw std::out_of_range("Kuyruk Bos");
+}
+
+int Kuyruk::elemanSayisiGetir()
+{
+    return elemanSayisi;
 }
