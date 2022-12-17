@@ -132,6 +132,7 @@
     <ClInclude Include="DugumAgac.hpp" />
     <ClInclude Include="Hucre.hpp" />
     <ClInclude Include="Kuyruk.hpp" />
+    <ClInclude Include="Organ.hpp" />
     <ClInclude Include="Radix.hpp" />
     <ClInclude Include="ReadFile.hpp" />
     <ClInclude Include="İkiliAramaAgaci.hpp" />

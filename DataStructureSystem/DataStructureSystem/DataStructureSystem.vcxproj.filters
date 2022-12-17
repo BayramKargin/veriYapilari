@@ -39,6 +39,9 @@
     <ClInclude Include="Doku.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Organ.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadFile.cpp">
