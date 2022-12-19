@@ -4,6 +4,7 @@
 #include "İkiliAramaAgaci.hpp"
 #include "Hucre.hpp"
 #include "Doku.hpp"
+#include "Organ.hpp"
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -20,6 +21,7 @@ void ReadFile::Parcala(string line)
     int j = 0;
     int adet = 1;
     int ortanca = 0;
+    int satir = 0;
     Kuyruk* kuyruk = new Kuyruk();
     Doku* doku = new Doku();
 
@@ -51,25 +53,19 @@ void ReadFile::Parcala(string line)
         doku->KuyrukEkle(yeniHucre->veri);
         gec = gec->sonraki;
     }
-    doku->OrtancaGetir(doku);
-   /*ortanca = (yeni->elemanSayisi) / 2;
-    for (int i = 0; i < ortanca; i++)
-    {
-        gec = gec->sonraki;
-    }
-   
-    return(gec->veri);*/
+   // doku->OrganYap(doku,satir);
+    satir++;
 }
 void ReadFile::Read()
 {
     ifstream dosyaOku;
     dosyaOku.open("Veri.txt");
     string line;
-    İkiliAramaAgaci* agac = new İkiliAramaAgaci();
+    int satir = 0;
     while (getline(dosyaOku, line))
     {
-        Parcala(line);
-        //agac->ekle(veri);
+        Parcala(line); 
+
     }
 
     dosyaOku.close();

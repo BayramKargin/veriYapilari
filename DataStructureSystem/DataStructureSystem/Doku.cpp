@@ -50,3 +50,11 @@ int Doku::OrtancaGetir(Doku* doku)
 
     return gec->veri;
 }
+/*void Doku::OrganYap(Doku* doku, int satir)
+{
+    if ((satir+1)%20 == 0)
+    {
+        Organ* organ = new Organ();
+    }
+    organ1->OrganAgacEkle(doku);
+}*/

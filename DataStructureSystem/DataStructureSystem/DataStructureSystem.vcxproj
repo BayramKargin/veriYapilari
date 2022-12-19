@@ -144,6 +144,7 @@
     <ClCompile Include="Hucre.cpp" />
     <ClCompile Include="Kuyruk.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Organ.cpp" />
     <ClCompile Include="Radix.cpp" />
     <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="İkiliAramaAgaci.cpp" />

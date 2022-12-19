@@ -71,5 +71,8 @@
     <ClCompile Include="Doku.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Organ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
