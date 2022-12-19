@@ -15,7 +15,7 @@ ReadFile::ReadFile()
 {
 
 }
-void ReadFile::Parcala(string line) 
+Doku* ReadFile::Parcala(string line) 
 {
     int number = 0;
     int j = 0;
@@ -55,6 +55,7 @@ void ReadFile::Parcala(string line)
     }
    // doku->OrganYap(doku,satir);
     satir++;
+    return doku;
 }
 void ReadFile::Read()
 {
@@ -62,11 +63,16 @@ void ReadFile::Read()
     dosyaOku.open("Veri.txt");
     string line;
     int satir = 0;
+    Organ* organ = new Organ();
     while (getline(dosyaOku, line))
     {
-        Parcala(line); 
-
+        if ((satir)%20==0)
+        {
+            organ = new Organ();
+        }
+        Doku* doku = Parcala(line);
+        organ->OrganEkle(doku);
+        satir++;
     }
-
     dosyaOku.close();
 }

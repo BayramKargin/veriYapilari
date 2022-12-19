@@ -35,6 +35,21 @@ void Kuyruk::ekle(int veri)
     }
     elemanSayisi++;
 }
+void Kuyruk::KuyrukOrganEkle(Organ* organ)
+{
+    if (ilk == 0)
+    {
+        ilk = new Dugum(organ);
+        son = ilk;
+    }
+    else
+    {
+        Dugum* yeni = new Dugum(organ);
+        son->sonraki = yeni;
+        son = yeni;
+    }
+    elemanSayisi++;
+}
 void Kuyruk::cikar()
 {
     if (ilk != 0)

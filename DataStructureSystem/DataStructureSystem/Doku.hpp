@@ -1,8 +1,9 @@
 #ifndef Doku_hpp
 #define Doku_hpp
+
 #include "Hucre.hpp"
 #include "Kuyruk.hpp"
-#include "Organ.hpp"
+//#include "Organ.hpp"
 class Doku
 {
 

@@ -8,10 +8,9 @@ class Organ
 public:
 	Organ();
 	//~Organ();
-	void OrganDokuEkle(Doku* doku);
-
+	void OrganEkle(Doku* doku);
 private:
+	
 	İkiliAramaAgaci* agac;
-	int satir; //20 doku
 };
 #endif // !Organ_hpp

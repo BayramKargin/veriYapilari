@@ -1,13 +1,14 @@
 #ifndef Kuyruk_hpp
 #define Kuyruk_hpp
 #include "Dugum.hpp"
-
+#include "Organ.hpp"
 class Kuyruk
 {
 public:
 	Kuyruk();
 	~Kuyruk();
 	void ekle(int veri);
+	void KuyrukOrganEkle(Organ* organ);
 	void cikar();
 	bool bosmu();
 	int getir();
@@ -15,6 +16,6 @@ public:
 	Dugum* ilk;
 	Dugum* son;
 	int elemanSayisi;
-
+	
 };
 #endif // !Kuyruk_hpp

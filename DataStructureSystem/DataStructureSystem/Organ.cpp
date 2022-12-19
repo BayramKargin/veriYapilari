@@ -3,9 +3,8 @@
 Organ::Organ()
 {
 	agac = 0;
-	satir = 20;
 }
-void Organ::OrganDokuEkle(Doku* doku)
+void Organ::OrganEkle(Doku* doku)
 {
 	agac->ekle(doku->OrtancaGetir(doku));
 }

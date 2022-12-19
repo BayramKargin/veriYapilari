@@ -9,7 +9,7 @@ public:
 	ReadFile();
 	//~ReadFile();
 	void Read();
-	void Parcala(string line);
+	Doku* Parcala(string line);
 private:
 
 };
