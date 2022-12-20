@@ -1,5 +1,8 @@
 #ifndef ReadFile_hpp
 #define ReadFile_hpp
+
+#include "Doku.hpp"
+
 #include <iostream>
 using namespace std;
 

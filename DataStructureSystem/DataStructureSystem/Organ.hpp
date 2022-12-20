@@ -6,7 +6,7 @@
 class Organ
 {
 public:
-	Organ();
+	Organ(İkiliAramaAgaci* agac);
 	//~Organ();
 	void OrganEkle(Doku* doku);
 private:

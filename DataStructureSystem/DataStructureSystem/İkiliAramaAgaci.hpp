@@ -7,7 +7,7 @@ class İkiliAramaAgaci
 public:
 	İkiliAramaAgaci();
 	~İkiliAramaAgaci();
-	bool varmi(int veri);
+	//bool varmi(int veri);
 	void ekle(int veri,DugumAgac* aktifDugum);
 	void ekle(int veri);
 	void sil(int veri);

@@ -2,7 +2,7 @@
 #define Doku_hpp
 
 #include "Hucre.hpp"
-#include "Kuyruk.hpp"
+//#include "Kuyruk.hpp"
 //#include "Organ.hpp"
 class Doku
 {

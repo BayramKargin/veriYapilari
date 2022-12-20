@@ -68,7 +68,6 @@ int Kuyruk::getir()
 {
     if (ilk != 0)
         return ilk->veri;
-   // throw std::out_of_range("Kuyruk Bos");
 }
 
 int Kuyruk::elemanSayisiGetir()

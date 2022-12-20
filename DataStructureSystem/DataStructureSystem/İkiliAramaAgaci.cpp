@@ -10,6 +10,7 @@
 }
 void İkiliAramaAgaci::ekle(int veri)
 {
+
 	ekle(veri,kok);
 }
 void İkiliAramaAgaci::ekle(int veri, DugumAgac* aktifDugum)

@@ -3,7 +3,7 @@
 #include "Radix.hpp"
 #include "İkiliAramaAgaci.hpp"
 #include "Hucre.hpp"
-#include "Doku.hpp"
+
 #include "Organ.hpp"
 #include <fstream>
 #include <string>
@@ -62,13 +62,14 @@ void ReadFile::Read()
     ifstream dosyaOku;
     dosyaOku.open("Veri.txt");
     string line;
+    İkiliAramaAgaci* agac = new İkiliAramaAgaci();
     int satir = 0;
-    Organ* organ = new Organ();
+    Organ* organ = new Organ(agac);
     while (getline(dosyaOku, line))
     {
-        if ((satir)%20==0)
+        if ((satir) % 20 == 0 && satir != 0)
         {
-            organ = new Organ();
+            organ = new Organ(agac);
         }
         Doku* doku = Parcala(line);
         organ->OrganEkle(doku);
