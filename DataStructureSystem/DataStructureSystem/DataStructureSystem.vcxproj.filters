@@ -45,6 +45,9 @@
     <ClInclude Include="Sistem.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SistemDugum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadFile.cpp">
@@ -78,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sistem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SistemDugum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

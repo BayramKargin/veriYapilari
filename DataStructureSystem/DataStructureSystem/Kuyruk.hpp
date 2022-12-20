@@ -2,6 +2,7 @@
 #define Kuyruk_hpp
 #include "Dugum.hpp"
 #include "Organ.hpp"
+#include "SistemDugum.hpp"
 class Kuyruk
 {
 public:
@@ -13,8 +14,11 @@ public:
 	bool bosmu();
 	int getir();
 	int elemanSayisiGetir();
-	Dugum* ilk;
+	Dugum* ilk ;
 	Dugum* son;
+	SistemDugum* sistemilk;
+	SistemDugum* sistemson;
+	int sistemelemanSayisi;
 	int elemanSayisi;
 	
 };

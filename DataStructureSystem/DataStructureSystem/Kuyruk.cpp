@@ -3,6 +3,9 @@
 Kuyruk::Kuyruk(){
 	ilk = 0;
 	son = 0;
+    sistemilk = 0;
+    sistemson = 0;
+    sistemelemanSayisi = 0;
 	elemanSayisi = 0;
 }
 Kuyruk::~Kuyruk() {
@@ -37,18 +40,18 @@ void Kuyruk::ekle(int veri)
 }
 void Kuyruk::KuyrukOrganEkle(Organ* organ)
 {
-    if (ilk == 0)
+    if (sistemilk == 0)
     {
-        ilk = new Dugum(organ);
-        son = ilk;
+        sistemilk = new SistemDugum(organ);
+        sistemson = sistemilk;
     }
     else
     {
-        Dugum* yeni = new Dugum(organ);
-        son->sonraki = yeni;
-        son = yeni;
+        SistemDugum* yeni = new SistemDugum(organ);
+        sistemson->sistemsonraki = yeni;
+        sistemson = yeni;
     }
-    elemanSayisi++;
+    sistemelemanSayisi++;
 }
 void Kuyruk::cikar()
 {

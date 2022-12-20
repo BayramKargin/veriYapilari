@@ -1,8 +1,8 @@
 #include "Sistem.hpp"
 
-Sistem::Sistem()
+Sistem::Sistem(Kuyruk* kuyruk)
 {
-	kuyruk = 0;
+	this->kuyruk = kuyruk;
 }
 void Sistem::SistemEkle(Organ* organ)
 {

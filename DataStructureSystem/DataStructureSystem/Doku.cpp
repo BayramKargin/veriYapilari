@@ -1,6 +1,5 @@
 #include "Doku.hpp"
 
-
 Doku::Doku() {
     ilk = 0;
     son = 0;

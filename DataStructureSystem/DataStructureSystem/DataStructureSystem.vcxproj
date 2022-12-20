@@ -136,6 +136,7 @@
     <ClInclude Include="Radix.hpp" />
     <ClInclude Include="ReadFile.hpp" />
     <ClInclude Include="Sistem.hpp" />
+    <ClInclude Include="SistemDugum.hpp" />
     <ClInclude Include="İkiliAramaAgaci.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +150,7 @@
     <ClCompile Include="Radix.cpp" />
     <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="Sistem.cpp" />
+    <ClCompile Include="SistemDugum.cpp" />
     <ClCompile Include="İkiliAramaAgaci.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

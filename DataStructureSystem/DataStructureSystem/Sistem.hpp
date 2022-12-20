@@ -7,12 +7,12 @@
 class Sistem
 {
 public:
-	Sistem();
+	Sistem(Kuyruk* kuyruk);
 	//~Sistem();
 	void SistemEkle(Organ* organ);
-
-private:
 	Kuyruk* kuyruk;
+private:
+
 };
 
 
