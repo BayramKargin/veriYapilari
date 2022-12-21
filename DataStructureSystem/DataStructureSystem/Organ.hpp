@@ -9,8 +9,8 @@ public:
 	Organ(İkiliAramaAgaci* agac);
 	//~Organ();
 	void OrganEkle(Doku* doku);
-private:
-	
 	İkiliAramaAgaci* agac;
+private:
+
 };
 #endif // !Organ_hpp

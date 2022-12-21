@@ -7,8 +7,9 @@ public:
 	SistemDugum(Organ* organ);
 	~SistemDugum();
 	SistemDugum* sistemsonraki;
-private:
 	Organ* organ;
+private:
+
 
 };
 

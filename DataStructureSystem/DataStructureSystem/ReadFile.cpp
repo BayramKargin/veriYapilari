@@ -37,14 +37,14 @@ Doku* ReadFile::Parcala(string line)
                 i++;
             }
             number = stoi(stringNumber);
-            cout << number << endl;
+           // cout << number << endl;
             kuyruk->ekle(number);
             //sayilar[j] = number;
             //j++;
         }
     }
     Radix* radix = new Radix(kuyruk, adet);
-    cout << "--------------------------------" << endl;
+   // cout << "--------------------------------" << endl;
     Kuyruk* yeni =radix->Sirala();
     Dugum* gec = yeni->ilk;
 
@@ -88,6 +88,25 @@ void ReadFile::Read()
         Doku* doku = Parcala(line);
         organ->OrganEkle(doku);
         satir++;
+    }
+    DugumOrganizma* organizmailk = organizma->kuyruk->ilk;
+    DugumOrganizma* gecOrganizma = organizmailk;
+    SistemDugum* sistemilk = organizma->kuyruk->ilk->sistem->kuyruk->sistemilk;
+    SistemDugum* gecSistem = sistemilk;
+    while (gecOrganizma != 0)
+    {
+        gecSistem = gecOrganizma->sistem->kuyruk->sistemilk;
+        while (gecSistem !=0)
+        {
+            if ((gecSistem->organ->agac->Denge()) > 1 || (gecSistem->organ->agac->Denge()) < -1)
+                cout << "#";
+            else
+                cout << " ";
+       
+            gecSistem = gecSistem->sistemsonraki;
+        }
+        cout << endl;
+        gecOrganizma = gecOrganizma->organizmaSonraki;
     }
     dosyaOku.close();
 }
