@@ -5,6 +5,7 @@
 #include "Hucre.hpp"
 #include "Sistem.hpp"
 #include "Organ.hpp"
+#include "Organizma.hpp"
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -63,10 +64,12 @@ void ReadFile::Read()
     dosyaOku.open("Veri.txt");
     string line;
     int satir = 0;
+    int organSayisi = 0;
     Kuyruk* kuyruk = new Kuyruk();
     Sistem* sistem = new Sistem(kuyruk);
     İkiliAramaAgaci* agac = new İkiliAramaAgaci();
     Organ* organ = new Organ(agac);
+    Organizma* organizma = new Organizma();
     while (getline(dosyaOku, line))
     {
         if ((satir) % 20 == 0 && satir != 0)
@@ -74,6 +77,13 @@ void ReadFile::Read()
             sistem->SistemEkle(organ);
             agac = new İkiliAramaAgaci();
             organ = new Organ(agac);
+            organSayisi++;
+            if ((organSayisi % 100 == 0) && (organSayisi != 0))
+            {
+                organizma->OrganizmaSistemEkle(sistem);
+                kuyruk = new Kuyruk();
+                sistem = new Sistem(kuyruk);
+            }
         }
         Doku* doku = Parcala(line);
         organ->OrganEkle(doku);

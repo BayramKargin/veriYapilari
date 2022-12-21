@@ -6,7 +6,10 @@ Kuyruk::Kuyruk(){
     sistemilk = 0;
     sistemson = 0;
     sistemelemanSayisi = 0;
-	elemanSayisi = 0;
+    elemanSayisi = 0;
+    /*organizmailk = 0;
+    organizmason = 0;
+    organizmaElemanSayisi = 0;*/
 }
 Kuyruk::~Kuyruk() {
 
@@ -53,6 +56,21 @@ void Kuyruk::KuyrukOrganEkle(Organ* organ)
     }
     sistemelemanSayisi++;
 }
+/*void Kuyruk::KuyrukSistemEkle(Sistem* sistem)
+{
+    if (organizmailk == 0)
+    {
+        organizmason = new DugumOrganizma(sistem);
+        organizmason = organizmailk;
+    }
+    else
+    {
+        DugumOrganizma* yeni = new DugumOrganizma(sistem);
+        organizmason->organizmaSonraki = yeni;
+        organizmason = yeni;
+    }
+    organizmaElemanSayisi++;
+}*/
 void Kuyruk::cikar()
 {
     if (ilk != 0)

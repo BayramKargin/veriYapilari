@@ -48,6 +48,15 @@
     <ClInclude Include="SistemDugum.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Organizma.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DugumOrganizma.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrganizmaKuyruk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadFile.cpp">
@@ -84,6 +93,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SistemDugum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Organizma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DugumOrganizma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrganizmaKuyruk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

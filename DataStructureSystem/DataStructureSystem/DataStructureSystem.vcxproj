@@ -130,9 +130,12 @@
     <ClInclude Include="Doku.hpp" />
     <ClInclude Include="Dugum.hpp" />
     <ClInclude Include="DugumAgac.hpp" />
+    <ClInclude Include="DugumOrganizma.hpp" />
     <ClInclude Include="Hucre.hpp" />
     <ClInclude Include="Kuyruk.hpp" />
     <ClInclude Include="Organ.hpp" />
+    <ClInclude Include="Organizma.hpp" />
+    <ClInclude Include="OrganizmaKuyruk.hpp" />
     <ClInclude Include="Radix.hpp" />
     <ClInclude Include="ReadFile.hpp" />
     <ClInclude Include="Sistem.hpp" />
@@ -143,10 +146,13 @@
     <ClCompile Include="Doku.cpp" />
     <ClCompile Include="Dugum.cpp" />
     <ClCompile Include="DugumAgac.cpp" />
+    <ClCompile Include="DugumOrganizma.cpp" />
     <ClCompile Include="Hucre.cpp" />
     <ClCompile Include="Kuyruk.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Organ.cpp" />
+    <ClCompile Include="Organizma.cpp" />
+    <ClCompile Include="OrganizmaKuyruk.cpp" />
     <ClCompile Include="Radix.cpp" />
     <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="Sistem.cpp" />
