@@ -1,15 +1,16 @@
 #ifndef Organ_hpp
 #define Organ_hpp
-#include "İkiliAramaAgaci.hpp"
+#include "IkiliAramaAgaci.hpp"
 #include "Doku.hpp"
 
 class Organ
 {
 public:
-	Organ(İkiliAramaAgaci* agac);
+	Organ(IkiliAramaAgaci* agac);
 	//~Organ();
 	void OrganEkle(Doku* doku);
-	İkiliAramaAgaci* agac;
+	IkiliAramaAgaci* agac;
+	Doku* doku;
 private:
 
 };

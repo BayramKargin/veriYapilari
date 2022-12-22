@@ -1,10 +1,12 @@
 #include "Organ.hpp"
 
-Organ::Organ(İkiliAramaAgaci* agac)
+Organ::Organ(IkiliAramaAgaci* agac)
 {
 	this->agac = agac;
+	doku = 0;
 }
 void Organ::OrganEkle(Doku* doku)
 {
-	agac->ekle(doku->OrtancaGetir(doku),agac->kok);
+	this->doku = doku;
+	agac->ekle(doku,agac->kok);
 }

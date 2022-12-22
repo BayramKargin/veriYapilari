@@ -132,6 +132,7 @@
     <ClInclude Include="DugumAgac.hpp" />
     <ClInclude Include="DugumOrganizma.hpp" />
     <ClInclude Include="Hucre.hpp" />
+    <ClInclude Include="Kontrol.hpp" />
     <ClInclude Include="Kuyruk.hpp" />
     <ClInclude Include="Organ.hpp" />
     <ClInclude Include="Organizma.hpp" />
@@ -140,7 +141,7 @@
     <ClInclude Include="ReadFile.hpp" />
     <ClInclude Include="Sistem.hpp" />
     <ClInclude Include="SistemDugum.hpp" />
-    <ClInclude Include="İkiliAramaAgaci.hpp" />
+    <ClInclude Include="IkiliAramaAgaci.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Doku.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="DugumAgac.cpp" />
     <ClCompile Include="DugumOrganizma.cpp" />
     <ClCompile Include="Hucre.cpp" />
+    <ClCompile Include="Kontrol.cpp" />
     <ClCompile Include="Kuyruk.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Organ.cpp" />
@@ -157,7 +159,7 @@
     <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="Sistem.cpp" />
     <ClCompile Include="SistemDugum.cpp" />
-    <ClCompile Include="İkiliAramaAgaci.cpp" />
+    <ClCompile Include="IkiliAramaAgaci.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

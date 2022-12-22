@@ -1,7 +1,7 @@
 #include "ReadFile.hpp"
 #include "Kuyruk.hpp"
 #include "Radix.hpp"
-#include "İkiliAramaAgaci.hpp"
+#include "IkiliAramaAgaci.hpp"
 #include "Hucre.hpp"
 #include "Sistem.hpp"
 #include "Organ.hpp"
@@ -37,14 +37,10 @@ Doku* ReadFile::Parcala(string line)
                 i++;
             }
             number = stoi(stringNumber);
-           // cout << number << endl;
             kuyruk->ekle(number);
-            //sayilar[j] = number;
-            //j++;
         }
     }
     Radix* radix = new Radix(kuyruk, adet);
-   // cout << "--------------------------------" << endl;
     Kuyruk* yeni =radix->Sirala();
     Dugum* gec = yeni->ilk;
 
@@ -54,7 +50,6 @@ Doku* ReadFile::Parcala(string line)
         doku->KuyrukEkle(yeniHucre->veri);
         gec = gec->sonraki;
     }
-   // doku->OrganYap(doku,satir);
     satir++;
     return doku;
 }
@@ -67,15 +62,18 @@ void ReadFile::Read()
     int organSayisi = 0;
     Kuyruk* kuyruk = new Kuyruk();
     Sistem* sistem = new Sistem(kuyruk);
-    İkiliAramaAgaci* agac = new İkiliAramaAgaci();
+    IkiliAramaAgaci* agac = new IkiliAramaAgaci();
     Organ* organ = new Organ(agac);
     Organizma* organizma = new Organizma();
     while (getline(dosyaOku, line))
     {
-        if ((satir) % 20 == 0 && satir != 0)
+        satir++;
+        if ((satir) % 20 == 0 )
         {
+            Doku* doku = Parcala(line);
+            organ->OrganEkle(doku);
             sistem->SistemEkle(organ);
-            agac = new İkiliAramaAgaci();
+            agac = new IkiliAramaAgaci();
             organ = new Organ(agac);
             organSayisi++;
             if ((organSayisi % 100 == 0) && (organSayisi != 0))
@@ -85,9 +83,11 @@ void ReadFile::Read()
                 sistem = new Sistem(kuyruk);
             }
         }
-        Doku* doku = Parcala(line);
-        organ->OrganEkle(doku);
-        satir++;
+        else
+        {
+            Doku* doku = Parcala(line);
+            organ->OrganEkle(doku);
+        }
     }
     DugumOrganizma* organizmailk = organizma->kuyruk->ilk;
     DugumOrganizma* gecOrganizma = organizmailk;
