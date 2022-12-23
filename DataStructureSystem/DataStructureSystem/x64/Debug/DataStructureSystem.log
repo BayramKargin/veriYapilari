@@ -1,2 +1,9 @@
-﻿  IkiliAramaAgaci.cpp
-  DataStructureSystem.vcxproj -> C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\x64\Debug\DataStructureSystem.exe
+﻿  Kontrol.cpp
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\Kontrol.cpp(18,7): error C2665: 'IkiliAramaAgaci::ekle': no overloaded function could convert all the argument types
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\IkiliAramaAgaci.hpp(10,7): message : could be 'void IkiliAramaAgaci::ekle(Doku *,DugumAgac *)'
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\Kontrol.cpp(18,7): message : 'void IkiliAramaAgaci::ekle(Doku *,DugumAgac *)': cannot convert argument 1 from 'int' to 'Doku *'
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\Kontrol.cpp(18,20): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\Kontrol.cpp(18,7): message : while trying to match the argument list '(int, DugumAgac *)'
+  IkiliAramaAgaci.cpp
+C:\Users\BAYRAM\Documents\GitHub\veriYapilari\DataStructureSystem\DataStructureSystem\IkiliAramaAgaci.cpp(18,2): warning C4551: function call missing argument list
+  Generating Code...

@@ -6,6 +6,7 @@
 #include "Sistem.hpp"
 #include "Organ.hpp"
 #include "Organizma.hpp"
+#include "Kontrol.hpp"
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -73,6 +74,7 @@ void ReadFile::Read()
             Doku* doku = Parcala(line);
             organ->OrganEkle(doku);
             sistem->SistemEkle(organ);
+            //organ->agac->PostOrder(agac->kok);
             agac = new IkiliAramaAgaci();
             organ = new Organ(agac);
             organSayisi++;
@@ -108,5 +110,8 @@ void ReadFile::Read()
         cout << endl;
         gecOrganizma = gecOrganizma->organizmaSonraki;
     }
+    Kontrol* kontrol = new Kontrol(organizma);
+    kontrol->KontrolEt();
+
     dosyaOku.close();
 }

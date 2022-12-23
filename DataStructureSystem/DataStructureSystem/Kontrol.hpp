@@ -9,6 +9,7 @@ public:
 	Kontrol(Organizma* organizma);
 	~Kontrol();
 	void KontrolEt();
+	IkiliAramaAgaci* YeniAgac(int* dizi);
 	Organizma* organizma;
 private:
 

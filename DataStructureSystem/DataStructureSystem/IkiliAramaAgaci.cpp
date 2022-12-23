@@ -1,4 +1,5 @@
 #include "IkiliAramaAgaci.hpp"
+
 #include <iostream>
 #include<algorithm>
 using namespace std;
@@ -6,16 +7,19 @@ using namespace std;
 IkiliAramaAgaci::IkiliAramaAgaci()
 {
 	kok = 0;
-	elemanSayisi = 0;
+	elemanSayisi = 20;
 	doku = 0;
+	i = 0;
+	dizi = new int[elemanSayisi];
+
 }
 IkiliAramaAgaci::~IkiliAramaAgaci() 
 {
-
+	free;
 }
 void IkiliAramaAgaci::ekle(int veri)
 {
-	//ekle(veri,kok);
+	
 }
 void IkiliAramaAgaci::ekle(Doku* doku, DugumAgac* aktifDugum)
 {
@@ -38,7 +42,7 @@ void IkiliAramaAgaci::ekle(Doku* doku, DugumAgac* aktifDugum)
 			aktifDugum->sag = new DugumAgac(doku->OrtancaGetir(doku),doku);
 	}
 	else return;
-	elemanSayisi++;
+	
 }
 int IkiliAramaAgaci::yukseklik(DugumAgac* aktifDugum)
 {
@@ -50,19 +54,26 @@ int IkiliAramaAgaci::yukseklik(DugumAgac* aktifDugum)
 	return -1;
 	
 }
-void IkiliAramaAgaci::PostOrder(DugumAgac* aktfimDugum)
+
+int* IkiliAramaAgaci::PostOrder(DugumAgac* aktfimDugum)
 {
-
-	if (aktfimDugum == 0)
-		return;
-
-	PostOrder(aktfimDugum->sol);
-
-	PostOrder(aktfimDugum->sag);
-
-
-
+	if (aktfimDugum == kok)
+	{
+		int* dizi1 = new int[elemanSayisi];
+		this->dizi = dizi1;
+	}
+	if (aktfimDugum)
+	{
+		PostOrder(aktfimDugum->sol);
+		PostOrder(aktfimDugum->sag);
+		dizi[i] = aktfimDugum->veri;
+		cout << dizi[i] << endl;
+		i++;
+		sil(aktfimDugum);
+	}
+	return dizi;
 }
+
 int IkiliAramaAgaci::elemanSayisigetir()
 {
 	return elemanSayisi;
@@ -82,7 +93,7 @@ void IkiliAramaAgaci::Dolas(DugumAgac* aktfifDugum)
 	}
 	Dolas(aktfifDugum->sag);
 	Dolas(aktfifDugum->sol);
-	int* dizi = new int [elemanSayisi];
+	
 }
 int IkiliAramaAgaci::Denge()
 {
@@ -94,7 +105,11 @@ int IkiliAramaAgaci::Dengesizlik(DugumAgac* aktifDugum)
 		return 0;
 	return yukseklik(aktifDugum->sol) - yukseklik(aktifDugum->sag);	
 }
-void IkiliAramaAgaci::sil(int veri)
+void IkiliAramaAgaci::sil(DugumAgac* aktfimDugum)
 {
-
+		delete aktfimDugum;
+}
+void IkiliAramaAgaci::Agacsil(IkiliAramaAgaci* aktfimDugum)
+{
+	delete aktfimDugum;
 }
