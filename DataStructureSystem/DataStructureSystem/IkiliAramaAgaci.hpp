@@ -15,7 +15,7 @@ public:
 	int yukseklik(DugumAgac* aktfiDugum);
 	void Agacsil(IkiliAramaAgaci* agac);
 	int elemanSayisigetir();
-	void ekle(int veri);
+	void ekle(int veri,DugumAgac* aktifDugum);
 	void sil(DugumAgac* aktifDugum);
 	DugumAgac* kok;
 	Doku* doku;

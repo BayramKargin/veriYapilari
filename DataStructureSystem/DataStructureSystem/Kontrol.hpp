@@ -8,7 +8,7 @@ class Kontrol
 public:
 	Kontrol(Organizma* organizma);
 	~Kontrol();
-	void KontrolEt();
+	Organizma* KontrolEt();
 	IkiliAramaAgaci* YeniAgac(int* dizi);
 	Organizma* organizma;
 private:

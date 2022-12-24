@@ -17,9 +17,27 @@ IkiliAramaAgaci::~IkiliAramaAgaci()
 {
 	free;
 }
-void IkiliAramaAgaci::ekle(int veri)
+void IkiliAramaAgaci::ekle(int veri,DugumAgac* aktifDugum)
 {
-	
+	if (kok == 0)
+	{
+		kok = new DugumAgac(veri, doku);
+	}
+	else if (aktifDugum->veri >= veri)
+	{
+		if (aktifDugum->sol)
+			ekle(veri, aktifDugum->sol);
+		else
+			aktifDugum->sol = new DugumAgac(veri, doku);
+	}
+	else if (aktifDugum->veri < veri)
+	{
+		if (aktifDugum->sag)
+			ekle(veri, aktifDugum->sag);
+		else
+			aktifDugum->sag = new DugumAgac(veri, doku);
+	}
+	else return;
 }
 void IkiliAramaAgaci::ekle(Doku* doku, DugumAgac* aktifDugum)
 {
@@ -67,7 +85,6 @@ int* IkiliAramaAgaci::PostOrder(DugumAgac* aktfimDugum)
 		PostOrder(aktfimDugum->sol);
 		PostOrder(aktfimDugum->sag);
 		dizi[i] = aktfimDugum->veri;
-		cout << dizi[i] << endl;
 		i++;
 		sil(aktfimDugum);
 	}

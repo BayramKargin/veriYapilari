@@ -111,7 +111,27 @@ void ReadFile::Read()
         gecOrganizma = gecOrganizma->organizmaSonraki;
     }
     Kontrol* kontrol = new Kontrol(organizma);
-    kontrol->KontrolEt();
+    Organizma* organizma11=kontrol->KontrolEt();
+    cout << endl << "-----------------------------------" << endl;
+    organizmailk = organizma11->kuyruk->ilk;
+    gecOrganizma = organizmailk;
+    sistemilk = organizma->kuyruk->ilk->sistem->kuyruk->sistemilk;
+    gecSistem = sistemilk;
+    while (gecOrganizma != 0)
+    {
+        gecSistem = gecOrganizma->sistem->kuyruk->sistemilk;
+        while (gecSistem != 0)
+        {
+            if ((gecSistem->organ->agac->Denge()) > 1 || (gecSistem->organ->agac->Denge()) < -1)
+                cout << "#";
+            else
+                cout << " ";
+
+            gecSistem = gecSistem->sistemsonraki;
+        }
+        cout << endl;
+        gecOrganizma = gecOrganizma->organizmaSonraki;
+    }
 
     dosyaOku.close();
 }
