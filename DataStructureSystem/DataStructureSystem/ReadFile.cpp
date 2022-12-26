@@ -1,3 +1,11 @@
+/**
+* @file ReadFile.cpp
+* @description Veri.txt dosyasından okuma işlemleri yapılan fonksiyonlar
+* @course Dersi 2/C
+* @assignment Ödev - 2
+* @date Kodu 24.12.2022
+* @author Bayram Kargin bayram.kargin@ogr.sakarya.edu.tr
+*/
 #include "ReadFile.hpp"
 #include "Kuyruk.hpp"
 #include "Radix.hpp"
@@ -7,9 +15,11 @@
 #include "Organ.hpp"
 #include "Organizma.hpp"
 #include "Kontrol.hpp"
+#include "Test.hpp"
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -66,6 +76,7 @@ void ReadFile::Read()
     IkiliAramaAgaci* agac = new IkiliAramaAgaci();
     Organ* organ = new Organ(agac);
     Organizma* organizma = new Organizma();
+    Test* test = new Test();
     while (getline(dosyaOku, line))
     {
         satir++;
@@ -91,47 +102,17 @@ void ReadFile::Read()
             organ->OrganEkle(doku);
         }
     }
-    DugumOrganizma* organizmailk = organizma->kuyruk->ilk;
-    DugumOrganizma* gecOrganizma = organizmailk;
-    SistemDugum* sistemilk = organizma->kuyruk->ilk->sistem->kuyruk->sistemilk;
-    SistemDugum* gecSistem = sistemilk;
-    while (gecOrganizma != 0)
-    {
-        gecSistem = gecOrganizma->sistem->kuyruk->sistemilk;
-        while (gecSistem !=0)
-        {
-            if ((gecSistem->organ->agac->Denge()) > 1 || (gecSistem->organ->agac->Denge()) < -1)
-                cout << "#";
-            else
-                cout << " ";
-       
-            gecSistem = gecSistem->sistemsonraki;
-        }
-        cout << endl;
-        gecOrganizma = gecOrganizma->organizmaSonraki;
-    }
+    system("cls");
+    cout << setw(30) << "Organizma" << endl;
+    test->TestEt(organizma);
+    system("pause");
+    system("cls");
     Kontrol* kontrol = new Kontrol(organizma);
     Organizma* organizma11=kontrol->KontrolEt();
-    cout << endl << "-----------------------------------" << endl;
-    organizmailk = organizma11->kuyruk->ilk;
-    gecOrganizma = organizmailk;
-    sistemilk = organizma->kuyruk->ilk->sistem->kuyruk->sistemilk;
-    gecSistem = sistemilk;
-    while (gecOrganizma != 0)
-    {
-        gecSistem = gecOrganizma->sistem->kuyruk->sistemilk;
-        while (gecSistem != 0)
-        {
-            if ((gecSistem->organ->agac->Denge()) > 1 || (gecSistem->organ->agac->Denge()) < -1)
-                cout << "#";
-            else
-                cout << " ";
+    cout << setw(50) << "Organizma (Mutasyona Uğradı)" << endl;
+    test->TestEt(organizma11);
 
-            gecSistem = gecSistem->sistemsonraki;
-        }
-        cout << endl;
-        gecOrganizma = gecOrganizma->organizmaSonraki;
-    }
+
 
     dosyaOku.close();
 }

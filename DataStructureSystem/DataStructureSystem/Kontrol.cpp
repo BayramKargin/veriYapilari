@@ -1,3 +1,11 @@
+/**
+* @file Kontrol.cpp
+* @description Kontrol sınıfı mutasyon için kontrol sınııfı
+* @course Dersi 2/C
+* @assignment Ödev - 2
+* @date Kodu 24.12.2022
+* @author Bayram Kargin bayram.kargin@ogr.sakarya.edu.tr
+*/
 #include "Kontrol.hpp"
 #include <iostream>
 using namespace std;
@@ -34,10 +42,6 @@ Organizma* Kontrol::KontrolEt()
 				sistemgec->organ->agac->Dolas(dolasilanAgac);
 				int * dizi =sistemgec->organ->agac->PostOrder(dolasilanAgac);
 				sistemgec->organ->agac = YeniAgac(dizi);
-				for (int  i = 0; i < 20; i++)
-				{
-					cout << dizi[i]<<endl;
-				}
 			}
 			sistemgec = sistemgec->sistemsonraki;
 		}

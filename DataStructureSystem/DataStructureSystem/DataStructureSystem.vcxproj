@@ -142,6 +142,7 @@
     <ClInclude Include="Sistem.hpp" />
     <ClInclude Include="SistemDugum.hpp" />
     <ClInclude Include="IkiliAramaAgaci.hpp" />
+    <ClInclude Include="Test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Doku.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="Sistem.cpp" />
     <ClCompile Include="SistemDugum.cpp" />
     <ClCompile Include="IkiliAramaAgaci.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
